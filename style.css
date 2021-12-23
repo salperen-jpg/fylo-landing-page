@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-img:not(.logo) {
+img:not(.logo, .arrow, .q-icon, .footer-icon) {
   width: 100%;
   display: block;
 }
@@ -48,7 +48,7 @@ body {
 }
 /* HEADER */
 nav {
-  padding: 3rem;
+  padding: 3rem 2rem;
 }
 .nav-center {
   width: 90vw;
@@ -68,7 +68,6 @@ nav {
 }
 .nav-links li a {
   color: var(--White);
-  padding: 0.5rem;
 }
 .nav-links li a:hover {
   text-decoration: underline;
@@ -86,6 +85,10 @@ nav {
   gap: 1rem;
   text-align: center;
 }
+.hero img {
+  max-width: 40rem;
+  object-fit: cover;
+}
 .hero-center h1 {
   text-align: center;
   max-width: 17rem;
@@ -100,12 +103,14 @@ nav {
 }
 .btn-hero {
   display: inline-block;
-  padding: 0.6rem 3rem;
+  padding: 0.8rem 5rem;
+  border-radius: 1.2rem;
 }
 /* CARDS */
 .cards {
   margin-top: 5rem;
   padding: 3rem;
+  overflow: hidden;
 }
 .cards-center {
   width: 90vw;
@@ -123,6 +128,7 @@ nav {
 }
 .card img {
   width: 7rem;
+  margin-bottom: 1rem;
 }
 .card p {
   text-align: center;
@@ -131,5 +137,201 @@ nav {
 @media screen and (min-width: 768px) {
   .cards-center {
     grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* PRODUCTIVE */
+.productive {
+  margin-top: 3rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+.productive-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+}
+.productive-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.productive-info p {
+  line-height: 1.5;
+}
+.productive-link {
+  color: var(--clr-inside-call-to-action-gradient);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .productive-center {
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .productive-info {
+    justify-content: center;
+  }
+  .productive-info p {
+    max-width: 30rem;
+  }
+}
+
+/* QUOTES */
+.quotes {
+  position: relative;
+  margin: 10rem 0;
+  margin-bottom: 20rem;
+  padding: 4rem;
+}
+.qutos-center {
+  width: 75vw;
+  max-width: 1170px;
+  margin: 0rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .qutos-center {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+.single-quotes {
+  background: var(--clr-testimonials-background-);
+  padding: 2rem 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+.single-quotes p {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.single-quotes img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.profile {
+  display: flex;
+  gap: 1rem;
+}
+.quotes-img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+.q-icon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: var(--clr-footer-background);
+  padding: 5rem;
+}
+.footer-form {
+  width: 90vw;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative;
+  top: -140px;
+  left: 0;
+  background: var(--clr-intro-and-email-sign-up-background);
+  text-align: center;
+  display: grid;
+  gap: 1.5rem;
+}
+.footer-form p {
+  max-width: 25rem;
+  line-height: 1.4;
+  margin: 0 auto;
+}
+.form-elemnt {
+  width: 100%;
+  height: 2.5rem;
+  border: transparent;
+  border-radius: 15px;
+}
+.form-action input {
+  background: var(--White);
+  appearance: none;
+  outline: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.form-action button {
+  border-radius: 15px;
+  border: transparent;
+  background: var(--clr-inside-call-to-action-gradient);
+  color: var(--White);
+}
+@media screen and (min-width: 768px) {
+  .footer-form .form-action {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+}
+.footer-logo {
+  max-width: 1170px;
+  margin: 5rem auto;
+}
+.footer-down {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.address {
+  max-width: 25rem;
+}
+.infos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+.contact img {
+  margin-right: 0.5rem;
+}
+.footer-down .links {
+  margin: 2rem 0;
+}
+@media screen and (min-width: 900px) {
+  .footer-links {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .contact {
+    margin: 0;
+  }
+  .pages li {
+    margin-bottom: 1rem;
+  }
+  .infos {
+    margin: 0;
   }
 }
